@@ -1,0 +1,39 @@
+form{
+    text-align: center;
+    border: 1px solid grey;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color:white;
+}
+
+.form-control{
+    background-color: rgb(233, 231, 231);
+}
+
+.table{
+    display: inline;
+    margin: 1px;
+    padding: 1px;
+    
+}
+
+#table_respuesta{
+    border: 1px solid grey;
+    text-align: left;
+    margin: 10px;
+    padding: 10px ;
+    background-color:rgb(149, 178, 192);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h5{
+    display: inline;
+}
+
+#table_title{
+
+    margin: 3px;
+}

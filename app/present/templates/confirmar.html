@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}
+QR
+{% endblock %}
+
+{% block content %}
+
+
+{% assets 'confirm_all_css' %}
+<link rel="stylesheet" href="{{ ASSET_URL }}" />
+{% endassets %}
+
+{% assets 'present_all_js' %}
+<script type="text/javascript" src="{{ ASSET_URL }}"></script>
+{% endassets %}
+
+
+<form action="/present/confirmar" method="POST" class="col-sm-4">
+
+
+    <input type="hidden" name="hash"  value="{{hash}}">
+    <div class="row mb-3">
+       
+        <div class="col-sm-12">
+            <input type="text" class="form-control form-control-sm" id="name" name="name" placeholder="NOMBRE Y APELLIDO" required>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-sm-12">
+            <input type="submit" class="form-control form-control-sm" id="time" placeholder="GENERAR">
+        </div>
+    </div>
+
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+
+body{
+    background-image: url('https://www.bbva.com/wp-content/uploads/2015/12/bbva-educacion-e1464704439593.jpg');
+    background-size: 125%;
+}
+
+#h1{
+    font-family:'Fredericka the Great', cursive, sans-serif;
+    font-size: 9rem;
+    color:rgb(148, 8, 8);
+}
+
+#h3{
+    font-family:'Fredericka the Great', cursive, sans-serif;
+    color:rgb(148, 8, 8);
+    font-size: 4rem;
+}
+
+.bannerArea{
+    margin-top: 300px;
+}
+

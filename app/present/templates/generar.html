@@ -1,0 +1,35 @@
+
+    {% extends "base.html" %}
+
+    {% block title %}
+    QR
+    {% endblock %}
+    
+    {% block content %}
+    
+    {% assets 'present_all_css' %}
+    <link rel="stylesheet" href="{{ ASSET_URL }}" />
+    {% endassets %}
+
+    {% assets 'present_all_js' %}
+    <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+
+
+      <div class="row col-md-6 bg-light" id="qr">
+        <div class="col-md-4 ">
+            <img src="data:image/png;base64,{{qr}}" class="img-fluid">
+        </div>
+        <div class="col">
+          <h5 class="mt-0">CONFIRMAR ASISTENCIA</h5>
+          <p>Escanear el qr para poder dar asistencia a la materia.</p>
+          <div class="input-group ">
+            <input type="text" class="form-control" value="{{url}}" aria-describedby="button-addon2" id="confirm_copy" disabled>
+            <button class="btn btn-outline-secondary" type="button"  onclick="copy()">Copy</button>
+          </div>
+        </div>
+      </div>
+
+
+    {% endblock %}
+

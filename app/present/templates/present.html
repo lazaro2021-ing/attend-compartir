@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}
+PRESENTE
+{% endblock %}
+
+{% block content %}
+{% assets 'present_all_css' %}
+<link rel="stylesheet" href="{{ ASSET_URL }}" />
+{% endassets %}
+
+{% assets 'present_all_js' %}
+<script type="text/javascript" src="{{ ASSET_URL }}"></script>
+{% endassets %}
+
+
+<form action="/present/generar" method="POST" class="col-5">
+
+
+    <div class="row mb-3">
+        <label for="clase" class="col-sm-2 col-form-label col-form-label-sm">INSTITUCION</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control form-control-sm" id="institucion" name="institucion" placeholder="UTN-FRCU"
+                required>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="clase" class="col-sm-2 col-form-label col-form-label-sm">ATERIA</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control form-control-sm" id="clase" name="clase" placeholder="Matematica"
+                required>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="mail" class="col-sm-2 col-form-label col-form-label-sm">EMAIL</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control form-control-sm" id="mail" name="mail" placeholder="juan@gmail.com"
+                required>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="time" class="col-sm-2 col-form-label col-form-label-sm">EXPIRACION</label>
+        <div class="col-sm-10">
+            <input type="time" class="form-control form-control-sm" id="time" name="time" required>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-sm-12">
+            <input type="submit" class="form-control form-control-sm" id="time" placeholder="GENERAR">
+        </div>
+    </div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}
+CONSULTA
+{% endblock %}
+
+{% block content %}
+
+
+{% assets 'consult_all_css' %}
+<link rel="stylesheet" href="{{ ASSET_URL }}" />
+{% endassets %}
+
+
+<form action="/present/consultar" method="POST" class="col-sm-4">
+
+
+    <div class="row mb-3">
+        <label for="mail" class="col-sm-2 col-form-label col-form-label-sm">EMAIL</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control form-control-sm" id="mail" name="mail" placeholder="juan@gmail.com"
+                required>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="institucion" class="col-sm-2 col-form-label col-form-label-sm">INSTITUCION</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control form-control-sm" id="institucion" name="institucion" required>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="materia" class="col-sm-2 col-form-label col-form-label-sm">MATERIA</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control form-control-sm" id="materia" name="clase" required>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-sm-12">
+            <input type="submit" class="form-control form-control-sm" id="consultar">
+        </div>
+    </div>
+
+</form>
+
+
+{% if filter_hash %}
+
+<div id='table_respuesta' >
+    <div id="table_title">
+        <h5>INSTITUCION:{{institucion}} / </h5>
+        <h5>MATERIA:{{materia}}</h5>
+    </div>
+    {% for hash in filter_hash %}
+        <table class="table" >
+            <thead class="thead-dark">
+                <tr class="table-secondary">
+                    <th scope="col">{{filter_hash[hash].date}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for alumno in filter_hash[hash].alumnos %}
+                <tr class="table-secondary">
+                    <td>{{alumno}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    {% endfor %}
+</div>
+{% endif %}
+
+
+{% endblock %}

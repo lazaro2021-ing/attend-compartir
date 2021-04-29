@@ -15,9 +15,12 @@ form{
 }
 
 .form-control{
-    background-color: rgb(233, 231, 231);
+    background-color: rgb(233, 233, 233);
 }
 
+.col-form-label{
+  font-weight: bold;
+}
 
 body{
     /*background-image: url('https://www.bbva.com/wp-content/uploads/2015/12/bbva-educacion-e1464704439593.jpg');*/

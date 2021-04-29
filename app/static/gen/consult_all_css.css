@@ -12,6 +12,11 @@ form{
     background-color: rgb(233, 231, 231);
 }
 
+.col-form-label{
+    font-weight: bold;
+  }
+
+
 .table{
     display: inline;
     margin: 1px;

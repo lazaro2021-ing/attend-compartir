@@ -15,6 +15,9 @@ form{
 }
 
 .form-control{
-    background-color: rgb(233, 231, 231);
+    background-color: rgb(233, 233, 233);
 }
 
+.col-form-label{
+  font-weight: bold;
+}

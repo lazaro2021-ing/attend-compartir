@@ -7,10 +7,10 @@ from app import flask_app
 mod=Blueprint("home",__name__,static_folder="static",template_folder="templates",static_url_path="/%s" % __name__)
 
 
-'''
-js = Bundle('present/js/main.js',output="gen/present_all_js.js")
-bundles["present_all_js"]=js
-'''
+
+js = Bundle('home/js/background_animate.js',output="gen/all_js.js")
+bundles["all_js"]=js
+
 css = Bundle("home/css/home.css","home/css/animate.min.css",output="gen/all_css.css")
 bundles["all_css"]=css
 

@@ -14,9 +14,14 @@
 </head>
 
 <body>
+    
 
     {% assets 'all_css' %}
     <link rel="stylesheet" href="{{ ASSET_URL }}" />
+    {% endassets %}
+
+    {% assets 'all_js' %}
+    <script type="text/javascript" src="{{ ASSET_URL }}"></script>
     {% endassets %}
 
     <nav class="navbar navbar-dark bg-dark">

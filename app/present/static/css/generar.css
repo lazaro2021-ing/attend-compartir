@@ -1,13 +1,16 @@
 body{
-    background-image: url('https://www.bbva.com/wp-content/uploads/2015/12/bbva-educacion-e1464704439593.jpg');
+    /*background-image: url('https://www.bbva.com/wp-content/uploads/2015/12/bbva-educacion-e1464704439593.jpg');*/
     background-size: 125%;
 }
 
 #qr{
- margin-top: 250px;
+    text-align: center;
+   
+ margin-top: 50px;
  margin-left: auto;
  margin-right: auto;
  padding: 10px;
+
 }
 
 

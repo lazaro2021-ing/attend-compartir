@@ -33,6 +33,7 @@ form{
     background-color:rgb(149, 178, 192);
     margin-left: 20px;
     margin-right: 20px;
+    border-radius: 20px;
 
 }
 
@@ -44,4 +45,12 @@ h5{
 #table_title{
 
     margin: 3px;
+    
+}
+
+hr{
+
+    border: 1px solid grey;
+    margin: 5px;
+
 }

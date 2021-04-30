@@ -1,0 +1,4 @@
+-tener python instalado
+-crear entorno virtual(ir a la carpeta del proyecto python -m venv env)
+-ir a env/Script/activate
+-instalar paquetes (pip install -r requirements.txt)

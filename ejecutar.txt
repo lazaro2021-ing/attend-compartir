@@ -1,4 +1,12 @@
--tener python instalado
+
+-crear cuenta en mongo atlas cloud
+-crear un proyecto(proyect_name)
+-crear cluster (cluster_name)
+-crar un usuario con permisos(user_name and password)
+-crear una base de datos(db_name)
+-crear las collecciones user y hash_keys
+
+-instalar python
 -crear entorno virtual(ir a la carpeta del proyecto python -m venv env)
 -ir a env/Script/activate
 -instalar paquetes (pip install -r requirements.txt)

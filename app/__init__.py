@@ -13,9 +13,9 @@ from flask_pymongo import PyMongo
 
 
 flask_app = Flask(__name__)
-flask_app.config['SECRET_KEY'] = '15da6d4asd21a3d1a6s41da1das31da3s2d1a3s2d1a65s1d3a2sd'  
-flask_app.config['MONGO_URI']='mongodb+srv://lzr:15221657@cluster0.hk2bc.mongodb.net/present?retryWrites=true&w=majority'
-flask_app.config['MONGO_DBNAME']="i_am_present"
+flask_app.config['SECRET_KEY'] = ''  
+flask_app.config['MONGO_URI']=''
+flask_app.config['MONGO_DBNAME']=""
 
 mongo=PyMongo(flask_app)
 

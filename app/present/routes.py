@@ -39,7 +39,10 @@ def generar():
     #mandar a una base de datos
     data_hash=str(hash(jsonify(data_req)))
     qr = qrcode.QRCode(version=1,border=0,box_size=8)
-    url=f'https://attendlzr.herokuapp.com/present/confirmar?hash={data_hash}'
+    #local
+    url=f'http://192.168.0.176:5000/present/confirmar?hash={data_hash}'
+    #heroku
+    #url=f'https://attendlzr.herokuapp.com/present/confirmar?hash={data_hash}'
     qr.add_data(url)
     img=qr.make(fit=True)
     img = qr.make_image(fill_color="black", back_color="white")

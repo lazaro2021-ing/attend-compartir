@@ -8,7 +8,7 @@ from app import flask_app
 
 
 if __name__ == "__main__":
-    flask_app.run(debug=True,host = '192.168.0.176',port=5000)
+    flask_app.run(debug=True,host = 'localhost',port=5000)
 
    
 

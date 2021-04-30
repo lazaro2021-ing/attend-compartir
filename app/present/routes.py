@@ -40,7 +40,7 @@ def generar():
     data_hash=str(hash(jsonify(data_req)))
     qr = qrcode.QRCode(version=1,border=0,box_size=8)
     #local
-    url=f'http://192.168.0.176:5000/present/confirmar?hash={data_hash}'
+    url=f'localhost:5000/present/confirmar?hash={data_hash}'
     #heroku
     #url=f'https://attendlzr.herokuapp.com/present/confirmar?hash={data_hash}'
     qr.add_data(url)

@@ -7,33 +7,29 @@ QR
 {% block content %}
 
 
-{% assets 'confirm_all_css' %}
-<link rel="stylesheet" href="{{ ASSET_URL }}" />
-{% endassets %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-10 col-md-5" id="form-confirmar">
+            <form action="/present/confirmar" method="POST">
 
-{% assets 'present_all_js' %}
-<script type="text/javascript" src="{{ ASSET_URL }}"></script>
-{% endassets %}
-
-
-<form action="/present/confirmar" method="POST" class="col-sm-4">
-
-
-    <input type="hidden" name="hash"  value="{{hash}}">
-    <div class="row mb-3">
-       
-        <div class="col-sm-12">
-            <input type="text" class="form-control form-control-sm" id="name" name="name" placeholder="NOMBRE Y APELLIDO" required>
+                <input type="hidden" name="hash" value="{{hash}}">
+                <div class="row mb-3">
+        
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control form-control-sm" id="name" name="name"
+                            placeholder="NOMBRE Y APELLIDO" required>
+                    </div>
+                </div>
+        
+                <div class="row mb-3">
+                    <div class="col-sm-12">
+                        <input type="submit" class="btn btn-outline-secondary col-12">
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
-
-    <div class="row mb-3">
-        <div class="col-sm-12">
-            <input type="submit" class="btn btn-outline-secondary col-12"  >
-        </div>
-    </div>
-
-</form>
-
+    
+</div>
 
 {% endblock %}

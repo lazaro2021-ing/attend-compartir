@@ -7,12 +7,7 @@ CONSULTA
 {% block content %}
 
 
-{% assets 'consult_all_css' %}
-<link rel="stylesheet" href="{{ ASSET_URL }}" />
-{% endassets %}
-
-
-<form action="/present/consultar" method="POST" class="col-sm-4">
+<form action="/present/consultar" method="POST" class="col-sm-4" id="form-consult">
 
 
     <div class="row mb-3">

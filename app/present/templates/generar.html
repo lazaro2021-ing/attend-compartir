@@ -6,17 +6,8 @@
     {% endblock %}
     
     {% block content %}
-    
-    {% assets 'present_all_css' %}
-    <link rel="stylesheet" href="{{ ASSET_URL }}" />
-    {% endassets %}
-
-    {% assets 'present_all_js' %}
-    <script type="text/javascript" src="{{ ASSET_URL }}"></script>
-    {% endassets %}
-
-
-      <div class="row col-md-5 bg-light" id="qr">
+     <div class="container">
+      <div class="row  col-md-9 bg-light" id="qr">
         <div class="col-md-4 ">
             <img src="data:image/png;base64,{{qr}}" class="img-fluid">
         </div>
@@ -30,6 +21,9 @@
         </div>
       </div>
 
+     </div>
+      
 
     {% endblock %}
 
+ 

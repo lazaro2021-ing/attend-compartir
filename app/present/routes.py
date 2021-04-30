@@ -13,10 +13,10 @@ from datetime import datetime
 mod=Blueprint("present",__name__,static_folder="static",template_folder="templates",static_url_path="/%s" % __name__)
 
 
-
 js = Bundle('present/js/main.js',output="gen/present_all_js.js")
 bundles["present_all_js"]=js
 
+'''
 css = Bundle("present/css/present.css","present/css/generar.css",output="gen/present_all_css.css")
 bundles["present_all_css"]=css
 
@@ -25,7 +25,7 @@ bundles["confirm_all_css"]=css
 
 css = Bundle("present/css/consult.css",output="gen/consult_all_css.css")
 bundles["consult_all_css"]=css
-
+'''
 
 
 @mod.route('/', methods=['GET','POST'])

@@ -1,0 +1,16 @@
+como deploy flask app en heroku.
+
+-instalar heroku en la pc
+-instalar git
+-pip install gunicorn
+-pip freeze > requirements.txt (genera el requirements)
+-crear un archivo Procfile que contenga  archivo de ejecucion:nombre de la variable de la app
+
+-git config --global user.email lazarodeusich@gmail.com
+-git config --global user.name  lazaro2021-ing
+-heroku login
+-heroku create <nombre de tu aplicación heroku>
+-heroku git:remote -a <nombre de tu aplicación heroku>
+-git add .
+-git commit -am "test-1"
+-git push heroku master

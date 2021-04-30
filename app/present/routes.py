@@ -97,22 +97,16 @@ def consultar():
         mail=request.form["mail"]
         materia=request.form["clase"]
         institucion=request.form["institucion"]
-        print(mail,materia,institucion)
         user = mongo.db.user.find_one({"email":mail})
-        print(user)
 
         filter_user=[{'hash':k['hash'],'date':k['expiracion'].split(' ')[0]} for k in user['present_hash'] if k['institucion']==institucion and k['clase']==materia]
-        print(filter_user)
         filter_hash={}
         for hash_k in filter_user:
-            print(hash_k['hash'])
             consulta=mongo.db.hash_keys.find_one({"hash":hash_k['hash']})
-            print(consulta)
             filter_hash[hash_k['hash']]={'alumnos':[]}
             filter_hash[hash_k['hash']]['alumnos']=[c['name'] for c in consulta['alumnos']]
             filter_hash[hash_k['hash']]['date']=hash_k['date']
             
-        print(filter_hash)
         return render_template('consult.html',filter_hash=filter_hash,institucion=institucion,materia=materia)
 
     return render_template('consult.html')

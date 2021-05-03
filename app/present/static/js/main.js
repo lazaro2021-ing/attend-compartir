@@ -10,3 +10,20 @@ function copy() {
     document.execCommand("copy");
   
   }
+
+
+function ver_table(element){
+
+  let group = document.getElementsByName("table_group");
+    group.forEach(table => {
+        if (table.id == element.value) {
+            
+                document.getElementById(element.value).style.display = 'block'
+        } else {
+            document.getElementById(table.id).style.display = 'none';
+        
+        }
+    }
+    )
+  
+}

@@ -99,7 +99,7 @@ def consultar():
         institucion=request.form["institucion"]
         user = mongo.db.user.find_one({"email":mail})
 
-        filter_user=[{'hash':k['hash'],'date':k['expiracion'].split(' ')[0]} for k in user['present_hash'] if k['institucion']==institucion and k['clase']==materia]
+        filter_user=[{'hash':k['hash'],'date':k['expiracion']} for k in user['present_hash'] if k['institucion']==institucion and k['clase']==materia]
         filter_hash={}
         for hash_k in filter_user:
             consulta=mongo.db.hash_keys.find_one({"hash":hash_k['hash']})

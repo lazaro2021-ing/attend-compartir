@@ -74,9 +74,8 @@ CONSULTA
 
             <div class="col-md-6 col-sm-12">
                 {% for hash in filter_hash %}
-
+                
                 <table class="table table-light" id="{{filter_hash[hash].date}}" name="table_group">
-                    <div class="table-responsive">
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">{{filter_hash[hash].date}}</th>
@@ -89,7 +88,6 @@ CONSULTA
                             </tr>
                             {% endfor %}
                         </tbody>
-                    </div>
                 </table>
 
                 {% endfor %}
@@ -102,48 +100,7 @@ CONSULTA
 
 {% endif %}
 
-<!--
-      {% if filter_hash %}
 
-    <div class="row">
-        <div class="col-12" id='table_respuesta'>
-            
-            <div class="col-12" id="table_title">
-                <h5>INSTITUCION:{{institucion}} / </h5>
-                <h5>MATERIA:{{materia}}</h5>
-                <hr>
-            </div>
-
-            
-
-            <div class="row">
-                {% for hash in filter_hash %}
-                <div class="col-md-1 col-sm-10">
-                    <table class="table">
-                        <thead class="thead-dark">
-                            <tr class="table-secondary">
-                                <th scope="col">{{filter_hash[hash].date}}</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for alumno in filter_hash[hash].alumnos %}
-                            <tr class="table-secondary">
-                                <td>{{alumno}}</td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-
-
-    </div>
-
-{% endif %}
-
--->
 
 
 

@@ -12,11 +12,11 @@ from app.config import *
 from flask_pymongo import PyMongo
 
 
-user_name=''
-password=''
-cluster_name=''
-db_name=''
-proyect_name=''
+user_name='test'
+password='test12345'
+cluster_name='cluster0'
+db_name='present'
+proyect_name='i_am_present'
 
 
 flask_app = Flask(__name__)

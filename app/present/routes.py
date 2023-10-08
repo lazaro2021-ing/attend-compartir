@@ -42,7 +42,7 @@ def generar():
     #local
     #url=f'localhost:5000/present/confirmar?hash={data_hash}'
     #heroku
-    url=f'https://attendlzr.herokuapp.com/present/confirmar?hash={data_hash}'
+    url=f'http://192.168.0.39:5000/present/confirmar?hash={data_hash}'
     qr.add_data(url)
     img=qr.make(fit=True)
     img = qr.make_image(fill_color="black", back_color="white")

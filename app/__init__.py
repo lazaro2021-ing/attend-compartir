@@ -12,17 +12,17 @@ from app.config import *
 from flask_pymongo import PyMongo
 
 
-user_name='test'
-password='test12345'
+user_name='lzr'
+password='1522'
 cluster_name='cluster0'
-db_name='present'
-proyect_name='i_am_present'
+db_name='data'
+proyect_name='attend'
 
 
 flask_app = Flask(__name__)
 
 flask_app.config['SECRET_KEY'] = '15da6d4asd21a3d1a6s41da1das31da3s2d1a3s2d1a65s1d3a2sd'  
-flask_app.config['MONGO_URI']=f'mongodb+srv://{user_name}:{password}@{cluster_name}.hk2bc.mongodb.net/{db_name}?retryWrites=true&w=majority'
+flask_app.config['MONGO_URI']=f'mongodb+srv://{user_name}:{password}@{cluster_name}.utfex22.mongodb.net/{db_name}?retryWrites=true&w=majority'
 flask_app.config['MONGO_DBNAME']=f'{proyect_name}'
 
 mongo=PyMongo(flask_app)
